@@ -6,7 +6,7 @@ import student.TaskThread.Resources.ParkingLot;
 import java.util.concurrent.TimeUnit;
 
 public class StreamOfLeavingCars extends Thread{
-    private ParkingLot parkingLot;
+    private final ParkingLot parkingLot;
 
     public StreamOfLeavingCars(ParkingLot parkingLot) {
         super();

@@ -6,6 +6,8 @@ import student.OptionalTaskThread.Streams.PlaneDeparture;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Run {
     public static void main( String[] args )
@@ -25,8 +27,7 @@ public class Run {
         Airport airport = new Airport(planes);
 
         for (int i = 0; i < 10; i++) {
-            PlaneDeparture planeDeparture = new PlaneDeparture(airport);
-            planeDeparture.start();
+            new Thread(new PlaneDeparture(airport)).start();
         }
     }
 }

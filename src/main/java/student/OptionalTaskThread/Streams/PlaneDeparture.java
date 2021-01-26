@@ -6,7 +6,7 @@ import student.OptionalTaskThread.Resources.Plane;
 
 import java.util.concurrent.TimeUnit;
 
-public class PlaneDeparture extends Thread{
+public class PlaneDeparture implements Runnable{
     Airport airport;
     Plane plane;
 
